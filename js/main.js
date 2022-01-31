@@ -1,6 +1,6 @@
 "use strict";
 
-/* Script for checking SMIL-animation (== ie support) */
+/* Script for checking SMIL-animation (== if browser used is ie) */
 if (!Modernizr.smil) {
   document.getElementById("header").style.display = "none";
   document.getElementById("main").style.display = "none";
@@ -17,7 +17,17 @@ collapsibles.forEach(function (item) {
     this.classList.toggle("collapsible--expanded");
   });
 });
+/* Script for making whole li element clickable inside navbar */
+
+var navbar = document.querySelector(".nav");
+var mainLink = document.querySelector(".nav__item");
+navbar.addEventListener("click", handleClick);
+
+function handleClick(event) {
+  mainLink.click();
+}
 /* Scripts for changing betweem component */
+
 
 function change__component(component) {
   var components = document.querySelectorAll(".component");
