@@ -207,6 +207,11 @@ a {
     border: 0;
   }
 }
+/* NOIE CONTAINER */
+#noie__header {
+  display: none;
+  margin-top: var(--header-heigth);
+}
 /* MAIN CONTAINER */
 .main__container {
   display: flex;

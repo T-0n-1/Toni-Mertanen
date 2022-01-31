@@ -1,6 +1,16 @@
 "use strict";
 
+/* Script for checking SMIL-animation (== ie support) */
+if (!Modernizr.smil) {
+  document.getElementById("header").style.display = "none";
+  document.getElementById("main").style.display = "none";
+  document.getElementById("xp").style.display = "none";
+  document.getElementById("footer").style.display = "none";
+  document.getElementById("noie__header").style.display = "block";
+}
 /* Script for collapsibles */
+
+
 var collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach(function (item) {
   return item.addEventListener("click", function () {
